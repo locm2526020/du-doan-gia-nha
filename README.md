@@ -6,7 +6,7 @@ Dự án đọc dữ liệu giao dịch nhà ở thực tế, làm sạch, phân
 rồi **tự động sinh báo cáo khoa học PDF** và cung cấp **dashboard Streamlit** để người dùng chọn biến,
 xem biểu đồ, ước tính giá và tải báo cáo.
 
-## Nhóm thực hiện – Nhóm 11
+## Nhóm thực hiện
 
 | STT | MSSV | Họ và tên |
 |---|---|---|

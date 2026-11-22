@@ -31,7 +31,6 @@ import phan_tich as pt  # noqa: E402
 
 # ---------- Thông tin đề tài (sửa theo nhóm) ----------
 TEN_DE_TAI = "PHÂN TÍCH CÁC YẾU TỐ ẢNH HƯỞNG VÀ DỰ ĐOÁN GIÁ NHÀ Ở BANG WASHINGTON (HOA KỲ)"
-TEN_NHOM = "Nhóm"
 NHOM = [("M2526019", "Trương Thị Thanh Loan"),
         ("M2526029", "Bùi Gia Bảo"),
         ("M2526020", "Nguyễn Văn Tấn Lộc")]
@@ -231,7 +230,7 @@ def build_report(raw, out, filter_note=None, fig_dir=None):
         Spacer(1, 14),
     ]
     info = ParagraphStyle("i", fontName="VN", fontSize=11, leading=16, alignment=TA_CENTER)
-    story.append(Paragraph(f"<b>Nhóm thực hiện: {TEN_NHOM}</b> – Lớp: {LOP}", info))
+    story.append(Paragraph(f"<b>Nhóm thực hiện</b> – Lớp: {LOP}", info))
     story.append(Spacer(1, 4))
     mem = pd.DataFrame(NHOM, columns=["MSSV", "Họ và tên"])
     mem.insert(0, "STT", [str(i) for i in range(1, len(mem) + 1)])
@@ -392,7 +391,7 @@ def build_report(raw, out, filter_note=None, fig_dir=None):
     doc = SimpleDocTemplate(out, pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm,
                             topMargin=1.8 * cm, bottomMargin=2 * cm,
                             title="Báo cáo khoa học – Dự đoán giá nhà",
-                            author=f"{TEN_NHOM}: " + ", ".join(n for _, n in NHOM))
+                            author=", ".join(n for _, n in NHOM))
     doc.build(story, onFirstPage=_footer, onLaterPages=_footer)
     if tmp:
         tmp.cleanup()
