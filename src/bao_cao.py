@@ -31,7 +31,7 @@ import phan_tich as pt  # noqa: E402
 
 # ---------- Thông tin đề tài (sửa theo nhóm) ----------
 TEN_DE_TAI = "PHÂN TÍCH CÁC YẾU TỐ ẢNH HƯỞNG VÀ DỰ ĐOÁN GIÁ NHÀ Ở BANG WASHINGTON (HOA KỲ)"
-TEN_NHOM = "Nhóm 11"
+TEN_NHOM = "Nhóm"
 NHOM = [("M2526019", "Trương Thị Thanh Loan"),
         ("M2526029", "Bùi Gia Bảo"),
         ("M2526020", "Nguyễn Văn Tấn Lộc")]
