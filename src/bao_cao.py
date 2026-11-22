@@ -188,7 +188,7 @@ def _footer(canvas, doc):
     canvas.saveState()
     canvas.setFont("VN", 8)
     canvas.setFillColor(colors.grey)
-    canvas.drawString(2 * cm, 1.2 * cm, "Báo cáo khoa học – Phân tích & dự đoán giá nhà")
+    canvas.drawString(2 * cm, 1.2 * cm, "Phân tích & dự đoán giá nhà")
     canvas.drawRightString(A4[0] - 2 * cm, 1.2 * cm, f"Trang {doc.page}")
     canvas.restoreState()
 
@@ -221,10 +221,7 @@ def build_report(raw, out, filter_note=None, fig_dir=None):
 
     # Trang bìa ngắn
     story += [
-        Spacer(1, 30),
-        Paragraph("BÁO CÁO KHOA HỌC", ParagraphStyle("k", fontName="VN-B", fontSize=13,
-                  alignment=TA_CENTER, textColor=colors.HexColor("#E07A1F"))),
-        Spacer(1, 8),
+        Spacer(1, 40),
         Paragraph(TEN_DE_TAI, ParagraphStyle("t", fontName="VN-B", fontSize=18, leading=24,
                   alignment=TA_CENTER, textColor=colors.HexColor("#1F3F75"))),
         Spacer(1, 14),
@@ -390,7 +387,7 @@ def build_report(raw, out, filter_note=None, fig_dir=None):
 
     doc = SimpleDocTemplate(out, pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm,
                             topMargin=1.8 * cm, bottomMargin=2 * cm,
-                            title="Báo cáo khoa học – Dự đoán giá nhà",
+                            title="Phân tích & dự đoán giá nhà",
                             author=", ".join(n for _, n in NHOM))
     doc.build(story, onFirstPage=_footer, onLaterPages=_footer)
     if tmp:
